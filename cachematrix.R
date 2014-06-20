@@ -1,8 +1,8 @@
 ## This is a pair of functions to enable R to cache inverted matrices to save
 ## computation time
 
-## this function is used to create instaces that hold the inverted matrix in m
-## and can be called be the functio cacheSolve
+## this function is used to create instances that hold the inverted matrix in m
+## and can be called by the function cacheSolve
 
 makeCacheMatrix <- function(x = matrix()) {
   m<-NULL
@@ -12,7 +12,7 @@ makeCacheMatrix <- function(x = matrix()) {
   }
   get<-function() x
   setinverse<-function(inverse) m<<-inverse
-  setinverse<-function() m
+  getinverse<-function() m
   list(set=set,get=get,
        setinverse=setinverse,
        getinverse=getinverse)
